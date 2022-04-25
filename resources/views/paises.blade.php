@@ -18,7 +18,7 @@
     }
 </style>
 <body>
-    <h1><em>paises de la region</h1>
+    <h1><em><center>paises de la region</center></h1>
     <table class="table table-striped">
         <thead> 
             <tr>
