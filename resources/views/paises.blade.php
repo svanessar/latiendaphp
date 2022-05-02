@@ -16,12 +16,13 @@
         color: #34236E;
        
     }
+  
 </style>
 <body>
     <h1><em><center>paises de la region</center></h1>
     <table class="table table-striped">
         <thead> 
-            <tr>
+            <tr bgcolor="#3BBAFE">
                 <th>
                     pais
                 </th>
@@ -31,15 +32,32 @@
                 <th>
                     moneda
                 </th>
+                <th>
+                    poblacion
+                </th>
+                <th>ciudades</th>
             </tr>
            
         </thead>
         <tbody>
             @foreach($paises as $pais => $infopais)
             <tr>
-                <td>{{$pais}}</td>
-                <td>{{$infopais["capital"]}}</td>
-                <td>{{$infopais["moneda"]}}</td>
+                <td rowspan='{{count($infopais["ciudades"])}}' >
+                {{$pais}}
+            </td>
+                <td rowspan='{{count($infopais["ciudades"])}}' >
+                    {{$infopais["capital"]}}
+                </td>
+                <td rowspan='{{count($infopais["ciudades"])}}' >
+                    {{$infopais["moneda"]}}</td>
+                <td rowspan='{{count($infopais["ciudades"])}}' >{{$infopais["poblacion"]}}
+
+                </td>
+                @foreach($infopais["ciudades"] as $cuidad)
+                <tr>
+                    <td>{{ $cuidad }}</td>
+                </tr>
+                @endforeach
             </tr>
 
             @endforeach
