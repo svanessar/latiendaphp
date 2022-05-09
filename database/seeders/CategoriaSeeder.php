@@ -2,15 +2,15 @@
 
 namespace Database\Seeders;
 
-use App\Models\Marca;
 use App\Models\Categoria;
+use App\Models\Marca;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class CategoriaSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
