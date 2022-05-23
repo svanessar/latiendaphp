@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+//dependencia al controlardor 
+use App\Http\Controllers\productoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -98,3 +99,5 @@ return view("paises")
         return view('productos.new');
     });
 
+    //Rutas REST
+    Route::resource('productos', productoController::class);
